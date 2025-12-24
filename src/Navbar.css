@@ -1,0 +1,249 @@
+.skyvolt-navbar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem !important;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+/* ===== BRAND SECTION ===== */
+.skyvolt-brand {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.skyvolt-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skyvolt-logo:hover {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.9);
+}
+
+/* ===== TITLE WITH TYPING EFFECT ===== */
+.skyvolt-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor;
+}
+
+.skyvolt-title:hover {
+  text-shadow: 
+    0 0 15px currentColor,
+    0 0 30px currentColor,
+    0 0 45px currentColor;
+  transform: scale(1.05);
+}
+
+/* ===== NAV LINKS WITH GLOW ===== */
+.skyvolt-link {
+  color: #94a3b8 !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(148, 163, 184, 0.3);
+}
+
+.skyvolt-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e, #facc15);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+.skyvolt-link:hover {
+  color: #38bdf8 !important;
+  text-shadow: 
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 30px #38bdf8;
+  transform: translateY(-2px);
+}
+
+.skyvolt-link:hover::before {
+  width: 100%;
+}
+
+/* ===== ACTIVE LINK ===== */
+.active-link {
+  color: #22c55e !important;
+  text-shadow: 
+    0 0 10px #22c55e,
+    0 0 20px #22c55e,
+    0 0 30px #22c55e !important;
+}
+
+.active-link::before {
+  width: 100%;
+  background: #22c55e !important;
+  box-shadow: 0 0 15px #22c55e;
+}
+
+/* ===== BUTTONS ===== */
+.btn-outline-info {
+  border: 2px solid #38bdf8 !important;
+  color: #38bdf8 !important;
+  background: transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.btn-outline-info:hover {
+  background: #38bdf8 !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #facc15, #f59e0b) !important;
+  border: none !important;
+  color: #0f172a !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #f59e0b, #facc15) !important;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ===== USER AREA ===== */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.user-icon {
+  font-size: 2rem;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6));
+}
+
+.user-icon:hover {
+  color: #22c55e;
+  filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.8));
+  transform: scale(1.1);
+}
+
+.user-email {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: #38bdf8;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  animation: fadeInDown 0.3s ease;
+  z-index: 10;
+}
+
+.logout-icon {
+  font-size: 1.5rem;
+  color: #ef4444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.5));
+}
+
+.logout-icon:hover {
+  color: #dc2626;
+  filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.9));
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .skyvolt-title {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-collapse {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+  
+  .skyvolt-link {
+    padding: 0.5rem 0;
+  }
+}
+
+/* ===== NAVBAR TOGGLER ===== */
+.navbar-toggler {
+  border: 2px solid #38bdf8 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8) !important;
+}

@@ -1,0 +1,174 @@
+
+
+/* ---------------- GLOBAL ---------------- */
+.home-page {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.home-hero-title {
+  animation: slideFade 1.2s ease forwards;
+}
+
+.home-hero-highlight {
+  background: linear-gradient(90deg, #00ffcc, #00c6ff);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.home-cta-main,
+.home-cta-secondary {
+  transition: all 0.4s ease;
+}
+
+.home-cta-main:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.home-cta-secondary:hover {
+  background-color: #ffffff;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* ---------------- ORBIT ANIMATION ---------------- */
+.home-hero-orbit {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: auto;
+}
+
+.home-hero-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  animation: rotate 14s linear infinite;
+}
+
+.home-hero-orbit-ring-2 {
+  inset: 25px;
+  animation-duration: 10s;
+}
+
+.home-hero-orbit-core {
+  position: absolute;
+  inset: 70px;
+  background: linear-gradient(135deg, #00ffcc, #28a745);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero-core-text {
+  font-weight: 700;
+  color: #003333;
+}
+
+/* ---------------- ENERGY CARDS ---------------- */
+.home-card {
+  transition: all 0.5s ease;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.home-card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.energy-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card text colors */
+.text-light-strong {
+  color: #e8f9ff;
+}
+
+.text-light-soft {
+  color: #b7d9e5;
+}
+
+/* Energy title colors */
+.text-solar { color: #ffd54f; }
+.text-wind { color: #81d4fa; }
+.text-hydro { color: #4dd0e1; }
+.text-biomass { color: #aed581; }
+.text-geo { color: #ffab91; }
+
+/* Gradient backgrounds */
+.bg-gradient-wind {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.bg-gradient-hydro {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.bg-gradient-biomass {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.bg-gradient-geo {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+/* ---------------- FORM SECTION ---------------- */
+.home-form-section {
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.home-form-card {
+  border-radius: 18px;
+  animation: slideUp 1s ease;
+}
+
+.home-form-card input,
+.home-form-card textarea,
+.home-form-card select {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.home-form-card input:focus,
+.home-form-card textarea:focus,
+.home-form-card select:focus {
+  box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.3);
+  border-color: #00ffcc;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-bg {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}

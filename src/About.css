@@ -1,0 +1,265 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        
+        /* Page Background with Pattern */
+        .about-page {
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          position: relative;
+          min-height: 100vh;
+        }
+        
+        .about-page::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(30, 60, 114, 0.05) 0%, transparent 50%);
+          pointer-events: none;
+        }
+        
+        .container {
+          position: relative;
+          z-index: 1;
+        }
+        
+        /* Title Animations */
+        .about-title {
+          position: relative;
+          display: inline-block;
+          animation: slideInLeft 0.8s ease-out;
+        }
+        
+        .about-title::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+          border-radius: 2px;
+          animation: expandWidth 1s ease-out 0.3s both;
+        }
+        
+        @keyframes slideInLeft {
+          from { opacity: 0; transform: translateX(-50px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes expandWidth {
+          from { width: 0; }
+          to { width: 80px; }
+        }
+        
+        /* Image Hover Effects */
+        .about-img {
+          transition: all 0.5s ease;
+          border: 4px solid #10b981;
+        }
+        
+        .about-img:hover {
+          transform: scale(1.05) rotate(2deg);
+          box-shadow: 0 25px 50px rgba(16, 185, 129, 0.3) !important;
+        }
+        
+        /* List Items Animation */
+        .about-list li {
+          animation: fadeInUp 0.6s ease-out backwards;
+          transition: all 0.3s ease;
+        }
+        
+        .about-list li:nth-child(1) { animation-delay: 0.1s; }
+        .about-list li:nth-child(2) { animation-delay: 0.2s; }
+        .about-list li:nth-child(3) { animation-delay: 0.3s; }
+        .about-list li:nth-child(4) { animation-delay: 0.4s; }
+        
+        .about-list li:hover {
+          transform: translateX(10px);
+          color: #10b981;
+        }
+        
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Impact Cards */
+        .impact-card {
+          transition: all 0.4s ease;
+          animation: zoomIn 0.6s ease-out backwards;
+          cursor: pointer;
+        }
+        
+        .impact-card:nth-child(1) { animation-delay: 0.2s; }
+        .impact-card:nth-child(2) { animation-delay: 0.4s; }
+        .impact-card:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes zoomIn {
+          from { opacity: 0; transform: scale(0.8); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        
+        .impact-card:hover {
+          transform: translateY(-15px) scale(1.05);
+          box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3) !important;
+          border-color: #10b981 !important;
+          background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%) !important;
+        }
+        
+        .impact-card i {
+          transition: all 0.4s ease;
+        }
+        
+        .impact-card:hover i {
+          transform: scale(1.3) rotate(360deg);
+        }
+        
+        /* FAQ Section Styles */
+        .faq-section {
+          background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .faq-section::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          right: -10%;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+          border-radius: 50%;
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .faq-section::after {
+          content: '';
+          position: absolute;
+          bottom: -50%;
+          left: -10%;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(30, 60, 114, 0.1) 0%, transparent 70%);
+          border-radius: 50%;
+          animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0) translateX(0); }
+          50% { transform: translateY(30px) translateX(20px); }
+        }
+        
+        .faq-section .container {
+          position: relative;
+          z-index: 1;
+        }
+        
+        /* Accordion Styles */
+        .accordion-item {
+          border: 2px solid #e5e7eb !important;
+          transition: all 0.3s ease;
+          animation: slideIn 0.5s ease-out backwards;
+        }
+        
+        .accordion-item:nth-child(1) { animation-delay: 0.1s; }
+        .accordion-item:nth-child(2) { animation-delay: 0.2s; }
+        .accordion-item:nth-child(3) { animation-delay: 0.3s; }
+        .accordion-item:nth-child(4) { animation-delay: 0.4s; }
+        .accordion-item:nth-child(5) { animation-delay: 0.5s; }
+        .accordion-item:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateX(-30px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .accordion-item:hover {
+          border-color: #10b981 !important;
+          box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2) !important;
+          transform: translateX(5px);
+        }
+        
+        .accordion-button {
+          background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+          border: none;
+          font-size: 1.1rem;
+          padding: 1.25rem 1.5rem;
+          transition: all 0.3s ease;
+        }
+        
+        .accordion-button:not(.collapsed) {
+          background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+          color: white !important;
+          box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .accordion-button:not(.collapsed) i {
+          color: white !important;
+        }
+        
+        .accordion-button:hover {
+          background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        
+        .accordion-button::after {
+          background-image: none;
+          content: '▼';
+          font-size: 0.9rem;
+          transition: transform 0.3s ease;
+          color: #10b981;
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+          transform: rotate(180deg);
+          color: white;
+        }
+        
+        .accordion-button:focus {
+          box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+          border: none;
+        }
+        
+        .accordion-body {
+          padding: 1.5rem;
+          background: #ffffff;
+          font-size: 1rem;
+          line-height: 1.8;
+          border-top: 2px solid #f3f4f6;
+          animation: fadeIn 0.4s ease-out;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        /* Section Title */
+        .faq-section h2 {
+          animation: fadeInDown 0.8s ease-out;
+        }
+        
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+          .about-img {
+            max-height: 300px !important;
+            margin-bottom: 2rem;
+          }
+          
+          .impact-card {
+            margin-bottom: 1rem;
+          }
+          
+          .accordion-button {
+            font-size: 1rem;
+            padding: 1rem;
+          }
+        }
