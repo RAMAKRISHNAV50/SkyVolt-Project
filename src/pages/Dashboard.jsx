@@ -1,44 +1,42 @@
-import React, { Suspense, lazy } from "react";
+// import React, { Suspense, lazy } from "react";
 
-// Lazy load dashboards
-const AdminDashboard = lazy(() => import("./AdminDashboard"));
-const UserDashboard = lazy(() => import("./UserDashboard"));
+// // Lazy load dashboards
+// const AdminDashboard = lazy(() => import("./AdminDashboard"));
+// const UserDashboard = lazy(() => import("./UserDashboard"));
 
-<<<<<<< HEAD
-const Dashboard = () => {
-  const role = localStorage.getItem("role"); // admin / client
+// const Dashboard = () => {
+//   const role = localStorage.getItem("role"); // admin / client
 
-  return (
-    <Suspense
-      fallback={
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <h3>Loading Dashboard...</h3>
-        </div>
-      }
-    >
-      {role === "admin" ? <AdminDashboard /> : <UserDashboard />}
-    </Suspense>
-  );
-};
+//   return (
+//     <Suspense
+//       fallback={
+//         <div style={{ textAlign: "center", marginTop: "50px" }}>
+//           <h3>Loading Dashboard...</h3>
+//         </div>
+//       }
+//     >
+//       {role === "admin" ? <AdminDashboard /> : <UserDashboard />}
+//     </Suspense>
+//   );
+// };
 
-export default Dashboard;
-=======
-// const Dashboard = () => (
-// <div className="container-fluid">
-// <UserDashboard />
-// <AdminDashboard />
-// </div>
-// );
 // export default Dashboard;
+// // const Dashboard = () => (
+// // <div className="container-fluid">
+// // <UserDashboard />
+// // <AdminDashboard />
+// // </div>
+// // );
+// // export default Dashboard;
 
-const UserDashboard = () => {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>User Dashboard</h2>
-      <p>Welcome to the user dashboard.</p>
-    </div>
-  );
-};
+// const UserDashboard = () => {
+//   return (
+//     <div style={{ padding: "20px" }}>
+//       <h2>User Dashboard</h2>
+//       <p>Welcome to the user dashboard.</p>
+//     </div>
+//   );
+// };
 
-export default UserDashboard;
->>>>>>> 447efe5 (Optimize dashboard with lazy loading and chunk splitting)
+// export default UserDashboard;
+
